@@ -1,0 +1,33 @@
+# Query: 
+# ContextLines: 1
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> Fibonacci series </title>
+</head>
+<body>
+    <h2>Fibonacci Series Generator</h2>
+    <label for="terms">Enter number of terms:</label>
+    <input type="number" id="terms" min="1" />
+    <button onclick="generateFibonacci()">Generate</button>
+
+    <p id="output"></p>
+
+    <script>
+        function generateFibonacci() {
+            const n = parseInt(document.getElementById('terms').value);
+            let first = 0, second = 1, result = '';
+
+            for (let i = 0; i < n; i++) {
+                result += first + ' ';
+                const next = first + second;
+                first = second;
+                second = next;
+            }
+
+            document.getElementById('output').innerText = 'Fibonacci Series: ' + result;
+        }
+    </script>
+</body>
+</html>

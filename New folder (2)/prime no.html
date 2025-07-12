@@ -1,0 +1,39 @@
+# Query: 
+# ContextLines: 1
+
+<!DOCTYPE html>
+ <html> 
+ <body style="background-color:rgba(214, 86, 203, 0.78)";></body>
+ <head>
+ <title> Prime Number</title>
+ <script type="text/Javascript">
+     function display()
+ {
+ var a,ans;
+ a=parseInt(form1.t1.value);
+ans=1;
+for(i=2;i<a;i++)
+{
+if(a%i==0)
+{
+ans=0;
+break;
+}
+}
+if(ans==1)
+alert("Number is prime ");
+else
+alert("Number is not prime");
+}
+</script>
+</head>
+<body>
+<h1 align ="center">Program to check number is Prime or not</h1>
+<form name="form1" style="text-align:center">
+Enter your Number (Greater than one ):-<input type ="text"name="t1"><br>
+<input type ="button" value="check Prime number" onClick="display()">
+</body>
+</html>
+
+
+
